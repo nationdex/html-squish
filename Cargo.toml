@@ -1,0 +1,25 @@
+[package]
+name = "html-squish"
+version = "0.1.0"
+edition = "2021"
+authors = ["MindVote Team", "html-squish contributors"]
+description = "Blazing fast, zero-allocation, SIMD-accelerated HTML and JSON-LD minifier for Rust"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/mindvote/html-squish"
+readme = "README.md"
+keywords = ["html", "minifier", "zero-allocation", "simd", "json-ld"]
+categories = ["web-programming", "no-std", "text-processing"]
+
+[features]
+default = ["std", "simd"]
+std = []
+simd = []
+
+[dependencies]
+
+[dev-dependencies]
+criterion = { version = "0.5", default-features = false }
+
+[[bench]]
+name = "squish_bench"
+harness = false
