@@ -64,11 +64,3 @@ html-squish/squish_in_place:      321.7 MiB/s (~9.5 µs per payload)
 html-squish/squish_aggressive:    261.8 MiB/s (~11.7 µs per payload)
 ```
 
-## Stack Selection: Rust vs. Zig
-
-- **Rust**: **99% Confidence Rate**
-  - Native integration with Maud and the MindVote Rust server stack without C/FFI boundary overhead.
-  - Zero-cost in-place slice mutation guarantees zero runtime allocation without memory safety compromises.
-  - Full `no_std` support with zero external dependencies.
-- **Zig**: **82% Confidence Rate**
-  - Excellent for standalone C-ABI shared libraries or cross-compilation targets, but incurs FFI boundary marshaling when called from a Rust server.
